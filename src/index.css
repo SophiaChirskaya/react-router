@@ -1,0 +1,111 @@
+*{
+  box-sizing: border-box;
+}
+
+form{
+  margin-bottom: 5rem;
+}
+
+body{
+  background-color: gray;
+}
+
+.blog{
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.blog h2{
+  font-size: 2.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.main-wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid gray;
+}
+
+.posts-list{
+  width: 60%;
+  border: 2px solid gray;
+}
+
+.right-wrapper{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid gray;
+
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.textarea-caption{
+  font-size: 1.2rem;
+  font-weight: 500;
+
+}
+
+textarea{
+  margin: 0 1rem 1rem 1rem;
+  height: 300px;
+  border: none;
+  width: 80%;
+  padding: 1rem;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+form button{
+  width: 20%;
+  margin-left: 2rem;
+  border: none;
+  background-color: blue;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  border: 2px solid gray;
+}
+
+form button:hover{
+  background-color: burlywood;
+  color: white;
+}
+
+.post{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  list-style: none;
+  border-bottom: 2px solid gray;
+}
+
+.post p{
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1rem;
+}
+
+.remove{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+}
+
+.empty-message{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 5rem;
+}
