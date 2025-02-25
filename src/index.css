@@ -5,7 +5,7 @@
 }
 
 header{
-  background-color: aqua;
+  background-color: grey;
 }
 
 .navbar-container ul{
@@ -19,7 +19,7 @@ header{
 }
 
 .navbar-container ul a{
-  color: chocolate;
+  color: black;
   text-decoration: none;
   font-size: 2rem;
 }
@@ -33,4 +33,19 @@ footer{
   position: fixed;
   bottom: 0;
   background-color: blue;
+}
+
+.postItem{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.postItem p{
+  font-size: 14px;
+}
+
+.img-post{
+  margin: 1rem;
+  width: 160px;
 }

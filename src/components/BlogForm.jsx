@@ -1,44 +1,6 @@
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import axios from "axios";
 
-
-// const blogPosts = [
-//     {
-//       id: 1,
-//       title: "Alla Scoperta delle Meraviglie Nascoste",
-//       author: "Ann Swan",
-//       content: "Scopri cinque luoghi poco conosciuti in Europa",
-//       category: "Europe"
-//     },
-//     {
-//       id: 2,
-//       title: "Come Viaggiare con un Budget Ridotto",
-//       author: "Brian Li",
-//       content: "Ecco alcuni consigli su voli economici, alloggi alternativi",
-//       category: "Africa"
-//     },
-//     {
-//       id: 3,
-//       title: "Diario di Viaggio: Esperienze Indimenticabili",
-//       author: "Chloe Chang",
-//       content: "Dalla Route 66 in USA: le strade più spettacolari da percorrere in auto o moto",
-//       category: "America"
-//     },
-//     {
-//       id: 4,
-//       title: "I Migliori Posti per un Weekend Romantico",
-//       author: "Dan Brown",
-//       content: "Pad thai di Bangkok: un viaggio attraverso i migliori street food",
-//       category: "Asia"
-//     },
-//     {
-//       id: 5,
-//       title: "Viaggiare da Soli: Consigli e Suggerimenti",
-//       author: "Elly White",
-//       content: "Great Ocean Road in Australia. Pronto a partire per un’avventura indimenticabile?",
-//       category: "Australia"
-//     } 
-//     ];
 
     const initialFormData = {
         title: "",
@@ -51,15 +13,6 @@ import axios from "axios";
         const [posts, setPosts] = useState([]);
         const [formData, setFormData] = useState(initialFormData);
 
-        function fetchPosts() {
-          axios.get("http://localhost:3000/posts")
-          .then((res) =>
-            setPosts(res.data)
-          
-        )
-        }
-
-        useEffect(fetchPosts, []);
 
         function handleFormData(e) {
             const value = e.target.name === "tags" ? e.target.value.split(",") : e.target.value;
@@ -91,22 +44,6 @@ import axios from "axios";
             setFormData(initialFormData);
         }
 
-        const removePost = i => {
-            const updatedPosts = posts.filter((post,index) => {
-              return index != i
-            });
-
-            // Chiamata API in DELETE
-            axios.delete(`http://localhost:3000/posts/${i}`)
-            .then(res =>
-                console.log(res),
-                setPosts(updatedPosts)    
-            )
-            .catch(err => console.log(err)
-            )
-
-
-          }
 
         return (
             <>
@@ -145,22 +82,6 @@ import axios from "axios";
                  <button>AGGIUNGI POST</button>
             </form>
 
-
-
-
-
-            {
-                posts.map((post, I) => (
-                    <div className="postItem" key={post.id}>
-                        <h2>{post.title}</h2>
-                        <h2>{post.content}</h2>
-                        <img src={post.image} alt={post.title} />
-                        <h2>{post.tags.join(", ")}</h2>
-                        <button onClick={() => removePost(post.id)}>CANCELLA POST</button>
-                    </div>
-
-                ))
-            }
             </>
         )
 

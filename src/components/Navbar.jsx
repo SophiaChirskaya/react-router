@@ -15,6 +15,9 @@ export default function Navbar() {
                 <li>
                     <NavLink to='/about'>ABOUT</NavLink>
                 </li>
+                <li>
+                    <NavLink to='/posts/create'>ADD POST</NavLink>
+                </li>
             </ul>
 
         </div>

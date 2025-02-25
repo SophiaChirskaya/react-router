@@ -11,6 +11,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
+import PostCreatePage from "./pages/PostCreatePage";
 
 
 function App() {
@@ -18,9 +19,12 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route element={<DefaultLayout />} >
-        <Route path="/" element={<HomePage />} />
+        <Route index element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/posts" element={<PostsPage />} />
+        <Route path='/posts'>
+          <Route index element={<PostsPage />} />
+          <Route path="create" element={<PostCreatePage />} />
+        </Route>
 
       </Route>
 
