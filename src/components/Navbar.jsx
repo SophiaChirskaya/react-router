@@ -7,13 +7,13 @@ export default function Navbar() {
         <div className="navbar-container">
             <ul>
                 <li>
-                    <Navlink to='/'>HOME</Navlink>
+                    <NavLink to='/'>HOME</NavLink>
                 </li>
                 <li>
-                    <Navlink to='/posts'>POSTS</Navlink>
+                    <NavLink to='/posts'>POSTS</NavLink>
                 </li>
                 <li>
-                    <Navlink to='/about'>ABOUT</Navlink>
+                    <NavLink to='/about'>ABOUT</NavLink>
                 </li>
             </ul>
 
