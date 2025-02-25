@@ -1,18 +1,23 @@
-export default function Navbar(props) {
-    const links = [
-        { id: 1, text: 'Home', url: '#', current: false },
-        { id: 2, text: 'Chi siamo', url: '#', current: true },
-        { id: 3, text: 'Posts', url: '#', current: false },
-    ];
+import { NavLink } from "react-router-dom";
 
+export default function Navbar() {
 
-    return (<nav>
+    return (
+        <>
+        <div className="navbar-container">
             <ul>
-                {props.linksProp.map((link) => (
-                    <li key={link.id}>
-                        <NavLink to={link.url}>{link.text}</NavLink>
-                    </li>
-                ))}
+                <li>
+                    <Navlink to='/'>HOME</Navlink>
+                </li>
+                <li>
+                    <Navlink to='/posts'>POSTS</Navlink>
+                </li>
+                <li>
+                    <Navlink to='/about'>ABOUT</Navlink>
+                </li>
             </ul>
-    </nav>);
+
+        </div>
+        </>
+    )
 };
