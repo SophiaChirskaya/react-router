@@ -1,5 +1,6 @@
 import {useState, useEffect} from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 
     const BlogsList = () => {
@@ -43,6 +44,8 @@ import axios from "axios";
                         <p>{post.content}</p>
                         <img className="img-post" src={post.image} alt={post.title} />
                         <h2>{post.tags.join(", ")}</h2>
+                        <Link to={`/posts/${post.id}`}>Vai al dettaglio</Link>
+
                         <button onClick={() => removePost(post.id)}>CANCELLA POST</button>
                     </div>
 

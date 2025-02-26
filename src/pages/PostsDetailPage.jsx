@@ -1,10 +1,10 @@
-import BlogsList from "./../components/BlogsList";
+import PostsDetail from "../components/PostsDetail";
 
 export default function PostsDetailPage() {
     return (
         <>
-        <h2>Blog di cucina</h2>
-        <BlogsList />
+        <h2>Pagina contenente componente dettaglio post</h2>
+        <PostsDetail />
         </>
     )
 }

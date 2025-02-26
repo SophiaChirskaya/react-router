@@ -12,6 +12,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import PostsPage from "./pages/PostsPage";
 import PostCreatePage from "./pages/PostCreatePage";
+import PostsDetailPage from "./pages/PostsDetailPage";
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/posts'>
           <Route index element={<PostsPage />} />
           <Route path="create" element={<PostCreatePage />} />
+          <Route path=":id" element={<PostsDetailPage />} />
         </Route>
 
       </Route>
